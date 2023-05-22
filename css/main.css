@@ -3,8 +3,6 @@
 }
 body {
   font-size: 14px;
-  width: auto;
-  height: auto;
 }
 
 .v3_488 {
@@ -2394,7 +2392,7 @@ body {
 
 /*untuk layar device berukuran kecil*/
 @media screen and (min-width: 450px) {
-  .light_blue, .green {
+  body {
       width: 50%
   }
 }
@@ -2405,14 +2403,14 @@ body {
       width: 33%;
   }
 
-  .orange {
+  body {
       width: 67%;
   }
 }
 
 /*untuk layar device berukuran besar*/
 @media screen and (min-width: 800px) {
-  .container {
+  body {
       width: 800px;
       margin-left: auto;
       margin-right: auto;
