@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp Register Page - Pesona Lokal</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="text-center"><a href="home.html"><img src="./assets/Header_Pesona Lokal.png" alt=""></a></div>
+      <div class="title-text">
+        <!-- <div class="title signup">Form Registrasi</div> -->
+      </div>
+      <div class="form-container">
+        <h3 class="text-center mt-4" style="color: rgba(102, 102, 102, 0.959); font-weight: 600;">Lupa Kata Sandi</h3>
+        <div class="form-inner">
+          <form id="lupaPass" method="POST" action="reset_password.php" >
+            <pre>
+            </pre>
+            <div id="lupaAlertContainer"></div>
+             <pre>
+            </pre>
+            <div class="field" style="margin-top: -20px;">
+              <input type="text" name="email" placeholder="Masukan Email " required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="kirim kode reset">
+            </div>
+            <div class="pass-link mt-4 text-center"><a href="loginSignUp.html">Masuk Ke Akun</a></div>
+          </form>
+          
+          <p id="error_message" style="color: red;"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+            document.getElementById("lupaPass").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah pengiriman form secara default
+            lupaUser();
+            });
+    //dinggo login
+        function lupaUser() {
+            var form = document.getElementById("lupaPass");
+            var formData = new FormData(form);
+
+            var loginAlertContainer = document.getElementById("lupaAlertContainer");
+            lupaAlertContainer.innerHTML = ""; // Menghapus semua alert login sebelumnya
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "reset_password.php", true);
+            xhr.onload = function() {
+                 if (xhr.status === 200) {
+            var response = xhr.responseText.trim();
+                if (response === 'Kode verifikasi telah dikirim ke alamat email Anda.') {
+                window.location.href = "lupaPassAdv.html"; // Mengarahkan ke halaman selanjutnya
+                } else {
+                showAlert("danger", "" + response, loginAlertContainer);
+                    }
+                } else {
+                    showAlert("danger", "Terjadi kesalahan. Silakan coba lagi.", loginAlertContainer);
+                    }
+                };
+            xhr.send(formData);
+        }
+        //dinggo nampilke pesan eror 
+         function showAlert(type, message, container) {
+ 
+            // membuat  elemen Alert Bootstrap
+            var alertElement = document.createElement("div");
+            alertElement.classList.add("alert", "alert-" + type, "alert-dismissible", "fade", "show");
+            alertElement.setAttribute("role", "alert");
+
+            // Tambahkan pesan dan tombol close ke dalam elemen Alert
+            alertElement.innerHTML =
+                '<strong>' + message + '</strong>' +
+                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                '<span aria-hidden="true">&times;</span>' +
+                '</button>';
+
+            // Tambahkan elemen Alert ke dalam container
+             container.appendChild(alertElement);
+        }
+</script>
+  <script  src="./js/login.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+<script> $(document).ready(function() {
+  $('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]').hide();
+});</script>
+
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peta Wisata - Pesona Lokal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <!-- Feathere Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My styles -->
+    <link rel="stylesheet" href="./css/boot.css">
+    <link rel="stylesheet" href="./css/template.css">
+    <link rel="stylesheet" href="./css/strap.css">
+    <link rel="stylesheet" href="./css/bootmin.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar2">
+      <a href="home.html" class="navbar2-logo"><img src="./assets/pesona.PNG" alt=""></a>
+
+      <div class="navbar2-nav">
+        <a href="destinasi.html" style="text-decoration: none;">Destinasi</a>
+        <a href="tiket.html" style="text-decoration: none;">Reservasi</a>
+        <a href="petaWisata.html" style="text-decoration: none;">Peta Wisata</a>
+        <a href="loginSignUp.html" style="color: #FF8E2B; text-decoration: none;">Masuk</a>
+      </div>
+
+      <div class="navbar2-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+    <?php 
+    if (isset($_SESSION['email'])) {
+        echo '<li><a href="userwork.php" title="Profile">Profile</a></li>';
+    } else {
+        echo '<li><a href="login.php" title="Log In">Log In</a></li>';
+    }
+    ?>
+
+    <!-- MAIN -->
+    <section class="hero" id="home">
+      <main class="content">  
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+  </head>
+
+  <div class="container">
+    <div class="row" style="margin-top: 120px;">
+        <h2>Peta Wisata</h2>  
+      <hr />
+    </div>
+
+    <div class="row-fluid">
+      Mau kemana nih? : 
+      <select class="selectpicker" data-show-subtext="false" data-live-search="true">
+        <option value="">Search</option>
+        <option value='Anaesthesia'>Tugu Yogyakarta</option>
+        <option value='Anatomy and Physiology'>Pantai Depok</option>
+        <option value='Cardiology'>Gunung Merapi</option>
+        <option value='Clinical Skills'>Gumuk Pasir</option>
+        <option value='Critical Care'>Heha Sky View</option>
+        <option value='Dermatology'>Sleman</option>
+        <option value='Ear, Nose and Throat'>Kota Yogyakarta</option>
+        <option value='Emergency Medicine'>Kulon Progo</option>
+        <option value='Emergency Nursing'>Bantul</option>
+        <option value='Endocrinology and Diabetes'>Gunung Kidul</option>
+        <!--<option value='Gastroenterology'>Gastroenterology</option>
+        <option value='General Dentistry'>General Dentistry</option>
+        <option value='General Medicine'>General Medicine</option>
+        <option value='General Practice'>General Practice</option>
+        <option value='Geriatrics'>Geriatrics</option>
+        <option value='Haematology'>Haematology</option>
+        <option value='Immunology'>Immunology</option>
+        <option value='Internal Medicine'>Internal Medicine</option>
+        <option value='Maxillofacial and Plastic Surgery'>Maxillofacial and Plastic Surgery</option>
+        <option value='Microbiology'>Microbiology</option>
+        <option value='Midwifery'>Midwifery</option>
+        <option value='Nephrology'>Nephrology</option>
+        <option value='Neurology'>Neurology</option>
+        <option value='Nursing'>Nursing</option>
+        <option value='Obstetrics and Gynaecology'>Obstetrics and Gynaecology</option>
+        <option value='Occupational Health'>Occupational Health</option>
+        <option value='Oncology'>Oncology</option>
+        <option value='Ophthalmology'>Ophthalmology</option>
+        <option value='Oral Medicine'>Oral Medicine</option>
+        <option value='Orthopaedics'>Orthopaedics</option>
+        <option value='Paediatric Nursing'>Paediatric Nursing</option>
+        <option value='Paediatrics'>Paediatrics</option>
+        <option value='Pain Medicine'>Pain Medicine</option>
+        <option value='Palliative Care'>Palliative Care</option>
+        <option value='Pathology and Laboratory Medicine'>Pathology and Laboratory Medicine</option>
+        <option value='Pharmacology'>Pharmacology</option>
+        <option value='Psychiatry'>Psychiatry</option>
+        <option value='Public Health'>Public Health</option>
+        <option value='Radiology'>Radiology</option>
+        <option value='Respiratory'>Respiratory</option>
+        <option value='Restorative Dentistry'>Restorative Dentistry</option>
+        <option value='Rheumatology'>Rheumatology</option>
+        <option value='Surgery'>Surgery</option>
+        <option value='Urology'>Urology</option> -->
+      </select><i class="bi bi-filetype-png"></i>
+    </div><br><br> 
+    
+   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+   <a href="https://github.com/khrisnairham/pesona-lokal/blob/cek/assets/Peta%20wisata%202022-1.png?raw=true"><button class="custom-btn btn-5"><span>Download Peta</span></button></a><br>
+ 
+    <div class="petaa"><img src="./assets/Peta wisata 2022-1.png" alt=""></div:cla>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+      </main>
+    </section>
+    <!-- ENF OF MAIN -->
+ 
+
+    <!-- FOOTER -->
+    <div>
+        <section class="footer-page" >
+              <div class="container">
+                <div class="row content justify-content-between">
+                  <div class="col-lg-4 col-sm-12 logo-wrapper flex-column align-items-center text-lg-start text-center align-items-lg-start">
+                    <!-- <img height="70px" class="ms-lg-4 ps-lg-3" src="./page-assets/pesona11.png" alt=""/> -->
+        
+                    <h2 style=" color: white; font-weight: 700 !important; font-size: 30px;">Pesona Lokal</h2>
+                    <p style="color: rgba(255, 255, 255, 0.747);width: 300px; margin-top: 5px;margin-bottom: 90px; font-family: monsterart; font-size: 15px;">Platform destinasi wisata Daerah Istimewa Yogyakarta sebagai promosi citra daerah, dengan beragam fitur menarik.</p>
+        
+                    
+                    <div class="d-flex social mt-4">
+                        <a target="_blank" href="//www.facebook.com/pesona.lokal.official " title="Facebook" class="social-link">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a target="_blank" href="//twitter.com/pesonalokal" title="Twitter" class="social-link">
+                          <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a target="_blank" href="//instagram.com/pesona.lokal/" title="Instagram" class="social-link">
+                          <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a target="_blank" href="//www.youtube.com/c/pesonalokalofficial" title="Youtube" class="social-link">
+                          <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a target="_blank" href="https://www.tiktok.com/@pesonalokaljogja" title="Tiktok" class="social-link">
+                            <img src="./assets/tiktok-brands.svg" width="60%">
+                        </a>
+                    </div>
+                  </div>
+                    <div class="col-lg-8 col-sm-12 flex-wrap text-center d-flex links justify-content-center justify-content-lg-end align-items-center footer-revamp-link">
+                        
+                             <div class="microsite-links row align-items-center w-100">
+        
+                            <div class="maps">
+                                
+                                <div class="mapouter"><div class="gmap_canvas">
+                                    <p class="txt">Kantor Kami</p>
+                                    <iframe width="210" height="160" id="gmap_canvas" src="https://maps.google.com/maps?q=amikom yogyakarta&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        
+                                </div></div>
+                            </div>
+                             
+                    </div>
+                    <div class="nav-footer">
+                      <a href="#">Home</a>
+                      <a href="#">Destinasi</a>
+                      <a href="#">Bantuan</a>
+                      <a href="#">Kritik dan Saran</a>
+                      <a href="#">Tentang Kami</a>
+                  </div>                   
+                </div>
+        
+        
+              </div>
+        
+            <div class="row mx-0 pt-5 mb-n4 footer-text mt-5 justify-content-center align-items-center" style="border-top : #ffffff solid 1px">
+              <div class="col-9 text-center">
+                <div class="container" style="height: 50px;">
+                  <p class="explanation mx-n4">
+                           Copyright <i class="fa-regular fa-copyright"></i> Togog 2023. All rights reserved
+                  </p>
+                </div>
+              </div>
+            </div>
+            </section>
+        </div>
+        <!-- FOOTER END -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- EXTERNAL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      <!-- My JavaScript -->
+      <script src="./js/template.js"></script>
+          
+      <script> $(document).ready(function() {
+        $('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]').hide();
+    });</script>
+    
+      
+  </body>
+</html>
